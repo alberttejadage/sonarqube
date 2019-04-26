@@ -15,7 +15,7 @@ EXPOSE 9000
 
 RUN groupadd -r sonarqube && useradd -r -g sonarqube sonarqube
 
-# grab gosu for easy step-down from root
+# grab gosu for easy step-down from root 
 RUN set -x \
     && wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture)" \
     && wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/1.10/gosu-$(dpkg --print-architecture).asc" \
